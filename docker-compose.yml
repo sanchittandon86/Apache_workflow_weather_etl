@@ -1,12 +1,7 @@
-version: "3.9"
-
 services:
   postgres:
     image: postgres:16
-
-    container_name: weather-to-postgres
-
-    restart: always
+    container_name: weather-postgres
 
     environment:
       POSTGRES_DB: weather_db
@@ -14,10 +9,39 @@ services:
       POSTGRES_PASSWORD: postgres
 
     ports:
-      - "5432:5432"
+      - "5433:5432"
 
     volumes:
       - postgres_data:/var/lib/postgresql/data
+
+  airflow:
+    image: apache/airflow:2.10.2
+    container_name: airflow
+
+    depends_on:
+      - postgres
+
+    environment:
+      DATA_DIR: /opt/airflow/data
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+
+      API_URL: "https://api.open-meteo.com/v1/forecast?latitude=19.0760&longitude=72.8777&current=temperature_2m,relative_humidity_2m,wind_speed_10m"
+
+      DB_HOST: "postgres"
+      DB_PORT: "5432"
+      DB_NAME: "weather_db"
+      DB_USER: "postgres"
+      DB_PASSWORD: "postgres"
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./app:/opt/airflow/app
+      - ./logs:/opt/airflow/logs
+
+    command: standalone
 
 volumes:
   postgres_data:

@@ -6,17 +6,26 @@ from logger import logger
 
 def run_pipeline():
 
-    logger.info("Starting ETL Pipeline...")
+    logger.info("Starting ETL Pipeline")
 
     weather = fetch_weather()
 
+    logger.info("Weather fetched successfully")
+
     df = transform_weather(weather)
+
+    logger.info("Data transformed successfully")
 
     save_to_csv(df)
 
+    logger.info("CSV generated")
+
     load_to_postgres(df)
 
-    logger.info("Pipeline Completed Successfully!")
+    logger.info("Data loaded into PostgreSQL")
+
+    logger.info("Pipeline completed successfully")
+
 
 
 if __name__ == "__main__":

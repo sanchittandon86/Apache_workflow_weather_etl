@@ -2,13 +2,18 @@ from extract import fetch_weather
 from transform import transform_weather
 from database import get_connection
 from logger import logger
+import os
 
 
-def save_to_csv(df, filename="data/weather.csv"):
-    """
-    Save the DataFrame to a CSV file.
-    """
+def save_to_csv(df):
+    output_dir = os.getenv("DATA_DIR", "data")
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    filename = os.path.join(output_dir, "weather.csv")
+
     df.to_csv(filename, index=False)
+
     logger.info(f"CSV saved successfully at {filename}")
 
 

@@ -1,0 +1,45 @@
+2026-07-01 20:44:35,063 | INFO | Starting ETL Pipeline
+2026-07-01 20:44:35,856 | INFO | API Success: 200
+2026-07-01 20:44:35,859 | INFO | Weather fetched successfully
+2026-07-01 20:44:35,864 | INFO | Data transformed successfully
+2026-07-01 20:44:35,869 | INFO | CSV saved successfully at data/weather.csv
+2026-07-01 20:44:35,869 | INFO | CSV generated
+2026-07-01 20:46:26,079 | INFO | Starting ETL Pipeline
+2026-07-01 20:46:26,812 | INFO | API Success: 200
+2026-07-01 20:46:26,813 | INFO | Weather fetched successfully
+2026-07-01 20:46:26,814 | INFO | Data transformed successfully
+2026-07-01 20:46:26,817 | INFO | CSV saved successfully at data/weather.csv
+2026-07-01 20:46:26,817 | INFO | CSV generated
+2026-07-01 20:47:12,962 | INFO | Starting ETL Pipeline
+2026-07-01 20:47:13,677 | INFO | API Success: 200
+2026-07-01 20:47:13,680 | INFO | Weather fetched successfully
+2026-07-01 20:47:13,684 | INFO | Data transformed successfully
+2026-07-01 20:47:13,690 | INFO | CSV saved successfully at data/weather.csv
+2026-07-01 20:47:13,690 | INFO | CSV generated
+2026-07-01 20:47:46,646 | INFO | Starting ETL Pipeline
+2026-07-01 20:47:47,363 | INFO | API Success: 200
+2026-07-01 20:47:47,366 | INFO | Weather fetched successfully
+2026-07-01 20:47:47,371 | INFO | Data transformed successfully
+2026-07-01 20:47:47,376 | INFO | CSV saved successfully at data/weather.csv
+2026-07-01 20:47:47,376 | INFO | CSV generated
+2026-07-01 20:48:26,367 | INFO | Starting ETL Pipeline
+2026-07-01 20:48:27,091 | INFO | API Success: 200
+2026-07-01 20:48:27,096 | INFO | Weather fetched successfully
+2026-07-01 20:48:27,129 | INFO | Data transformed successfully
+2026-07-01 20:48:27,140 | INFO | CSV saved successfully at data/weather.csv
+2026-07-01 20:48:27,140 | INFO | CSV generated
+2026-07-01 20:49:16,902 | INFO | Starting ETL Pipeline
+2026-07-01 20:49:17,624 | INFO | API Success: 200
+2026-07-01 20:49:17,625 | INFO | Weather fetched successfully
+2026-07-01 20:49:17,628 | INFO | Data transformed successfully
+2026-07-01 20:49:17,630 | INFO | CSV saved successfully at data/weather.csv
+2026-07-01 20:49:17,630 | INFO | CSV generated
+2026-07-01 20:50:32,873 | INFO | Starting ETL Pipeline
+2026-07-01 20:50:33,601 | INFO | API Success: 200
+2026-07-01 20:50:33,604 | INFO | Weather fetched successfully
+2026-07-01 20:50:33,609 | INFO | Data transformed successfully
+2026-07-01 20:50:33,614 | INFO | CSV saved successfully at data/weather.csv
+2026-07-01 20:50:33,614 | INFO | CSV generated
+2026-07-01 20:50:33,655 | INFO | Data loaded into PostgreSQL successfully!
+2026-07-01 20:50:33,655 | INFO | Data loaded into PostgreSQL
+2026-07-01 20:50:33,655 | INFO | Pipeline completed successfully
