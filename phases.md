@@ -14,9 +14,14 @@ weather_etl/
 ├── requirements.txt
 └── .env
 
+Step 1
 Below are commands to Create Virtual Environment 
 [python3 -m venv venv]
 [source venv/bin/activate]
+
+Step 2
+We'll only install what we need for this phase.
+[pip install requests]
 
 Phase 1
 Fetch weather data from a public API.
