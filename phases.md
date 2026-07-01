@@ -31,3 +31,31 @@ We'll only install what we need for this phase.
 Phase 2
 pip install pandas
 create transform.py in App
+structure the data in any format you like I did it like units and data is stored differently 
+
+phase 3
+convert the transformed data into csv
+(venv) sanchittandon@VF396 weather_etl % cat data/weather.csv
+time,temperature,temperature_unit,humidity,humidity_unit,wind_speed,wind_speed_unit
+2026-07-01T14:15,26.0,°C,92,%,15.4,km/h
+
+Phase 4
+Step 1 — Install PostgreSQL Driver
+[pip install psycopg2-binary]
+
+Step 2 [Docker Setup]
+docker compose up -d
+
+Step 3 — Initialize Postgres
+docker exec -it weather-to-postgres psql -U postgres
+
+Step 4 — Create a Database
+CREATE TABLE weather_data (
+    id SERIAL PRIMARY KEY,
+    time TIMESTAMP,
+    temperature NUMERIC,
+    humidity INTEGER,
+    wind_speed NUMERIC
+);
+
+Load Data into PostgreSQL
