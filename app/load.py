@@ -1,6 +1,7 @@
 from extract import fetch_weather
 from transform import transform_weather
 from database import get_connection
+from logger import logger
 
 
 def save_to_csv(df, filename="data/weather.csv"):
@@ -8,7 +9,7 @@ def save_to_csv(df, filename="data/weather.csv"):
     Save the DataFrame to a CSV file.
     """
     df.to_csv(filename, index=False)
-    print(f"CSV saved successfully at {filename}")
+    logger.info(f"CSV saved successfully at {filename}")
 
 
 def load_to_postgres(df):
@@ -38,7 +39,7 @@ def load_to_postgres(df):
     cursor.close()
     conn.close()
 
-    print("Data loaded into PostgreSQL successfully!")
+    logger.info("Data loaded into PostgreSQL successfully!")
 
 
 if __name__ == "__main__":

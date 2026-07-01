@@ -1,5 +1,6 @@
 import pandas as pd
 from extract import fetch_weather
+from logger import logger
 
 def transform_weather(weather_json):
     
@@ -21,4 +22,5 @@ if __name__ == "__main__":
     weather = fetch_weather()
     df = transform_weather(weather)
 
-    print(df)
+    logger.info("Transformed Data:")
+    logger.info(df)

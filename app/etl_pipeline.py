@@ -1,11 +1,12 @@
 from extract import fetch_weather
 from transform import transform_weather
 from load import load_to_postgres, save_to_csv
+from logger import logger
 
 
 def run_pipeline():
 
-    print("Starting ETL Pipeline...")
+    logger.info("Starting ETL Pipeline...")
 
     weather = fetch_weather()
 
@@ -15,7 +16,7 @@ def run_pipeline():
 
     load_to_postgres(df)
 
-    print("Pipeline Completed Successfully!")
+    logger.info("Pipeline Completed Successfully!")
 
 
 if __name__ == "__main__":
